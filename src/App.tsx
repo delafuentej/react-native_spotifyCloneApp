@@ -2,15 +2,17 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNavigator from './presentation/navigation/BottomTabNavigation/BottomTabNavigator';
+import { PaperProvider } from 'react-native-paper';
 
 
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <BottomTabNavigator/>
-    </NavigationContainer>
-    
+    <PaperProvider>
+       <NavigationContainer>
+        <BottomTabNavigator/>
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 export default App;
