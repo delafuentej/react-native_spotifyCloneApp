@@ -4,7 +4,7 @@ import { SearchScreen } from '../../screens/search/SearchScreen';
 
 
 type SearchStackParamList = {
-  Search: undefined
+  SearchScreen: undefined
 };
 const SearchStack = createStackNavigator<SearchStackParamList>();
 
@@ -13,7 +13,7 @@ const SearchStackNavigator = () => {
     <SearchStack.Navigator screenOptions={{
       headerShown: false,
   }}>
-      <SearchStack.Screen name="Search" component={SearchScreen} />
+      <SearchStack.Screen name="SearchScreen" component={SearchScreen} />
     </SearchStack.Navigator>
   );
 };

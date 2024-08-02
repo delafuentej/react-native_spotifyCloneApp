@@ -7,9 +7,9 @@ import FavouritesStackNavigator from '../StackNavigation/FavouritesStackNavigato
 import { CustomIcon } from '../../components/ui/CustomIcon';
 
 type BottomTabParamList = {
-  HomeTab: undefined;
-  SearchTab: undefined;
-  FavouritesTab: undefined;
+  Home: undefined;
+  Search: undefined;
+  Favourites: undefined;
 }
 
 export const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -25,13 +25,13 @@ const BottomTabNavigator = () =>{
         size= 20;
 
         switch(route.name){
-          case 'HomeTab':
+          case 'Home':
             iconName = 'home';
             break;
-          case 'SearchTab':
+          case 'Search':
             iconName = 'search';
             break;
-          case 'FavouritesTab':
+          case 'Favourites':
             iconName = 'heart';
             break;
           default:
@@ -41,12 +41,11 @@ const BottomTabNavigator = () =>{
       },
       tabBarActiveTintColor: '#20C563',
       tabBarInactiveTintColor: 'gray',
-     
     })}
     >
-      <BottomTab.Screen name="HomeTab" component={HomeStackNavigator} />
-      <BottomTab.Screen name="SearchTab" component={SearchStackNavigator} />
-      <BottomTab.Screen name="FavouritesTab" component={FavouritesStackNavigator} />
+      <BottomTab.Screen name="Home" component={HomeStackNavigator} />
+      <BottomTab.Screen name="Search" component={SearchStackNavigator} />
+      <BottomTab.Screen name="Favourites" component={FavouritesStackNavigator} />
     </BottomTab.Navigator>
   );
 };

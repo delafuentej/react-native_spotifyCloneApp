@@ -5,7 +5,7 @@ import { FavouritesScreen } from '../../screens/favourites/FavouritesScreen';
 
 
 type FavouriteStackParamList = {
-  Favourites: undefined;
+  FavouritesScreen: undefined;
 }
 
 const FavouritesStack = createStackNavigator<FavouriteStackParamList>();
@@ -15,7 +15,7 @@ const FavouritesStackNavigator = () => {
     <FavouritesStack.Navigator screenOptions={{
       headerShown: false,
   }}>
-      <FavouritesStack.Screen name="Favourites" component={FavouritesScreen} />
+      <FavouritesStack.Screen name="FavouritesScreen" component={FavouritesScreen} />
     </FavouritesStack.Navigator>
   );
 };
