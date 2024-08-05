@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/react-in-jsx-scope */
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -37,7 +39,7 @@ const BottomTabNavigator = () =>{
           default:
             break;
         }
-        return <CustomIcon name={iconName} size={size} color={color} />;
+        return <CustomIcon name={iconName} size={size} color={color} />
       },
       tabBarActiveTintColor: '#20C563',
       tabBarInactiveTintColor: 'gray',
