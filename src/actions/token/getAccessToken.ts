@@ -10,9 +10,7 @@ import { TokenResponse } from '../../infrastructure/interface/token.response';
 //function to obtain the token
 
 export const getToken = async() =>{
-    console.log('Client_id', CLIENT_ID);
-    console.log('Client_Secret', CLIENT_SECRET);
-    console.log('url_token',API_URL_TOKEN);
+   
     // const params = new URLSearchParams();
     // params.append('grant_type', 'client_credentials');
     // params.append('client_id', CLIENT_ID);
@@ -24,8 +22,8 @@ export const getToken = async() =>{
     });
     const params = body.toString();
 
-    console.log('body', body);
-    console.log('params', params);
+    // console.log('body', body);
+    // console.log('params', params);
     try{
         const resp = await axios.post<TokenResponse>(API_URL_TOKEN, params, {
             headers:{
@@ -34,6 +32,7 @@ export const getToken = async() =>{
         });
         console.log('resp', resp);
         const token = resp.data.access_token;
+        console.log('token',token);
         await AsyncStorageAdapter.setItem('token',token);
         return token;
 

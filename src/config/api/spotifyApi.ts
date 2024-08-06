@@ -2,7 +2,7 @@
 import {API_URL_TOKEN} from '@env';
 import axios from 'axios';
 import {AsyncStorageAdapter} from '../adapters/async-storage';
-import { getToken } from '../../actions/token/getToken';
+import { getToken } from '../../actions/token/getAccessToken';
 
 
 // 1. Create a configured axios instance
