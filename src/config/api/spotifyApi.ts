@@ -2,7 +2,7 @@
 import {API_URL_TOKEN} from '@env';
 import axios from 'axios';
 import {AsyncStorageAdapter} from '../adapters/async-storage';
-import { getToken } from '../../actions/token/getAccessToken';
+import { getAccessToken } from '../../actions/token/getAccessToken';
 
 
 // 1. Create a configured axios instance
@@ -20,7 +20,7 @@ spotifyApi.interceptors.request.use(
         let token = await AsyncStorageAdapter.getItem('token');
         
         if(!token){
-            await getToken();
+            await getAccessToken();
         }
         if(token){
             config.headers['Authorization'] = `Bearer ${token}`;

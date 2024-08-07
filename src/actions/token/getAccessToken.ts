@@ -9,7 +9,7 @@ import { TokenResponse } from '../../infrastructure/interface/token.response';
 
 //function to obtain the token
 
-export const getToken = async() =>{
+export const getAccessToken = async() =>{
    
     // const params = new URLSearchParams();
     // params.append('grant_type', 'client_credentials');
