@@ -8,6 +8,7 @@ import { CustomIcon } from '../../components/ui/CustomIcon';
 import { HomeScreen } from '../../screens/home/HomeScreen';
 import { SearchScreen } from '../../screens/search/SearchScreen';
 import { FavouritesScreen } from '../../screens/favourites/FavouritesScreen';
+import { colors } from '../../../config/theme/globalStyles';
 
 type BottomTabParamList = {
   Home: undefined;
@@ -39,7 +40,7 @@ const BottomTabNavigator = () =>{
         },
         tabBarIcon: ({ focused, color, size }) => {
         let iconName: string;
-        color = focused ? '#20C563' : 'gray';
+        color = focused ? colors.green : colors.lightGray;
         size = 20;
 
         switch(route.name){
@@ -57,8 +58,8 @@ const BottomTabNavigator = () =>{
         }
         return <CustomIcon name={iconName} size={size} color={color} />
       },
-      tabBarActiveTintColor: '#20C563',
-      tabBarInactiveTintColor: 'gray',
+      tabBarActiveTintColor: colors.green,
+      tabBarInactiveTintColor: colors.lightGray,
     })}
     >
       <BottomTab.Screen name="Home" component={HomeScreen} />
